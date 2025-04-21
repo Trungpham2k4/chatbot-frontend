@@ -1,0 +1,74 @@
+{
+  "conversations": [
+    {
+      "id": "1",
+      "title": "Cuộc trò chuyện mới",
+      "createdAt": "2023-05-20T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "title": "Hỏi về React",
+      "createdAt": "2023-05-19T08:30:00Z"
+    },
+    {
+      "id": "fe17",
+      "title": "Cuộc trò chuyện mới 3",
+      "createdAt": "2025-04-17T14:28:04.193Z"
+    },
+    {
+      "id": "bacb",
+      "title": "Cuộc trò chuyện mới 4",
+      "createdAt": "2025-04-17T14:31:52.690Z"
+    },
+    {
+      "id": "9f9f",
+      "title": "Cuộc trò chuyện mới 5",
+      "createdAt": "2025-04-17T14:31:53.690Z"
+    },
+    {
+      "id": "dc42",
+      "title": "Cuộc trò chuyện mới 6",
+      "createdAt": "2025-04-17T14:31:54.260Z"
+    },
+    {
+      "id": "3c94",
+      "title": "Cuộc trò chuyện mới 7",
+      "createdAt": "2025-04-17T14:31:54.403Z"
+    },
+    {
+      "id": "6129",
+      "title": "Cuộc trò chuyện mới 8",
+      "createdAt": "2025-04-17T14:33:01.675Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "1",
+      "conversationId": 1,
+      "text": "Xin chào!",
+      "isUser": true,
+      "createdAt": "2023-05-20T10:01:00Z"
+    },
+    {
+      "id": "2",
+      "conversationId": 1,
+      "text": "Chào bạn! Tôi có thể giúp gì cho bạn?",
+      "isUser": false,
+      "createdAt": "2023-05-20T10:02:00Z"
+    },
+    {
+      "id": "57fa",
+      "conversationId": "1",
+      "text": "Xin chào",
+      "isUser": true,
+      "createdAt": "2025-04-17T14:28:28.197Z"
+    },
+    {
+      "id": "2085",
+      "conversationId": "1",
+      "text": "hello",
+      "isUser": true,
+      "createdAt": "2025-04-17T14:30:04.043Z"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+.navbar{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: white;
+    padding: 0px 20px;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+  
+.user-profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .user-profile:hover {
+    background-color: #e6eaf1;
+  }
+  
+  .avatar {
+    width: 36px;
+    height: 36px;
+    background-color: #1e88e5;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+
+.user-dropdown{
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 10px;
+    z-index: 1000;
+}
+.user-dropdown.show{
+    display: block;
+}
+
+.nav-item{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+.nav-item:hover{
+    background-color: #e6eaf1;
+}
+.nav-links{
+    text-decoration: none;
+    color: black;
+}
+.nav-links-login{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.nav-links-register{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-login{
+    background-color: #1e88e5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+.nav-login:hover{
+    background-color: #1565c0;
+}
+.nav-register{
+    background-color: #e6eaf1;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+.nav-register:hover{
+    background-color: #dbe4f3;
+}
+
+li{
+    list-style: none;
+}

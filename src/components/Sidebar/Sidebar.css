@@ -1,0 +1,260 @@
+/* Sidebar chính */
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background-color: #f0f4f9;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    position: fixed;
+    z-index: 10000;
+    border-right: 1px solid #e5e5e6;
+  }
+  
+  .sidebar.closed {
+    transform: translateX(-100%);
+  }
+  
+  /* Header sidebar */
+  .sidebar-header {
+    padding: 14px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e6;
+    background-color: #f0f4f9;
+  }
+  
+  .new-chat-btn {
+    background-color: #e6eaf1;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #1a1a1a;
+    flex: 1;
+    margin-right: 10px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .new-chat-btn:hover {
+    background-color: #dbe4f3;
+  }
+  
+  .new-chat-btn span {
+    font-size: 18px;
+    margin-right: 8px;
+    font-weight: bold;
+  }
+  
+  .close-sidebar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    padding: 6px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .close-sidebar:hover {
+    background-color: #e6eaf1;
+  }
+  
+  .close-sidebar svg {
+    display: block;
+  }
+  
+  /* Danh sách conversation */
+  .conversation-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px 0;
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db #f0f4f9;
+  }
+  
+  .conversation-list::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .conversation-list::-webkit-scrollbar-track {
+    background: #f0f4f9;
+  }
+  
+  .conversation-list::-webkit-scrollbar-thumb {
+    background-color: #d1d5db;
+    border-radius: 3px;
+  }
+  
+  .conversation-item {
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+    margin: 2px 8px;
+    border-radius: 6px;
+  }
+  
+  .conversation-item:hover {
+    background-color: #e6eaf1;
+  }
+  
+  .conversation-item.active {
+    background-color: #dbe4f3;
+    font-weight: 500;
+  }
+  
+  .conversation-icon {
+    margin-right: 10px;
+    color: #666;
+    flex-shrink: 0;
+  }
+  
+  .conversation-item.active .conversation-icon {
+    color: #1e88e5;
+  }
+  
+  .conversation-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Footer sidebar */
+  .sidebar-footer {
+    padding: 12px;
+    border-top: 1px solid #e5e5e6;
+    background-color: #f0f4f9;
+  }
+
+  /* Nút mở sidebar khi đóng */
+.open-sidebar-btn {
+    position: fixed;
+    left: 20px;
+    top: 18px;
+    width: 44px;
+    height: 44px;
+    background-color: #1e88e5;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    transition: all 0.3s ease;
+  }
+
+  .open-sidebar-btn {
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .open-sidebar-btn:hover {
+    background-color: #1565c0;
+    transform: scale(1.05);
+  }
+  
+  .open-sidebar-btn svg {
+    color: white;
+  }
+  
+  /* Hiệu ứng khi hover */
+  .open-sidebar-btn::after {
+    content: 'Mở thanh công cụ';
+    position: absolute;
+    left: 50px;
+    white-space: nowrap;
+    background-color: #333;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+  
+  .open-sidebar-btn:hover::after {
+    opacity: 1;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .open-sidebar-btn {
+      left: 8px;
+      bottom: 15px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
+  .user-profile span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* Hiệu ứng cho mobile */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 260px;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .new-chat-btn {
+      padding: 8px 12px;
+      font-size: 13px;
+    }
+    
+    .conversation-item {
+      padding: 8px 12px;
+      font-size: 13px;
+    }
+    
+    .sidebar-footer {
+      padding: 10px;
+    }
+  }
+
+  /* Trong file Sidebar.css */
+@media (max-width: 768px) {
+    .sidebar {
+      position: fixed;
+      z-index: 1000;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .sidebar.open {
+      transform: translateX(0);
+    }
+    
+    .close-sidebar {
+      display: block;
+    }
+    
+    /* Ẩn nút mở sidebar trên mobile nếu có menu button trong header */
+    .open-sidebar-btn {
+      display: none;
+    }
+  }
